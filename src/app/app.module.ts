@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { ParteSuperiorFijaComponent } from './parte-superior-fija/parte-superior-fija.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
-import { TrbajosYestudiosComponent } from './trbajos-yestudios/trbajos-yestudios.component';
+import { TrabajosComponent } from './trabajos/trabajos.component';
+import { EstudiosComponent } from './estudios/estudios.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TrbajosYestudiosComponent } from './trbajos-yestudios/trbajos-yestudios
     ParteSuperiorFijaComponent,
     PrincipalComponent,
     AcercaDeComponent,
-    TrbajosYestudiosComponent
+    TrabajosComponent,
+    EstudiosComponent
   ],
   imports: [
     BrowserModule,

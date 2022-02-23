@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosPorfolioService } from '../datos-porfolio.service';
 
 @Component({
   selector: 'app-principal',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private datosPorfolio:DatosPorfolioService) { }
 
   ngOnInit(): void {
+    this.datosPorfolio.obtenerDatos();
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="mat-card" id="first-card">
     <div id="profile-background">
-        <img src="./assets/imagenes/fondo.png">
+        <img [src]="miPorfolio.backImage">
     </div>
     <div id="info" style="padding: 16px">
         <div id="info-img">
@@ -13,7 +13,7 @@
         </div>
         <div id="info-data">
             <div>
-                <h1>EL NOMBRE DEL TIPO</h1>
+                <h1>{{miPorfolio.name}}</h1>
                 <div id="info-company">INFORMACION DEL TIPO</div>
                 <div id="info-contact">
                     <span>LUGAR X DEL TIPO</span>

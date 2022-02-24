@@ -1,0 +1,124 @@
+{
+    "name": "Nombre",
+    "backImage": "./assets/imagenes/fondo.png",
+    "position": "Rango",
+    "img": "./assets/.jpeg",
+    "company": {
+        "name": "compania",
+        "img": "",
+        "url": "#"
+    },
+    "school": {
+        "name": "escuela",
+        "img": "./assets/imagenes/.json",
+        "url": "https://"
+    },
+    "ubicacion": "lugar",
+    "about": "Acerca de",
+    "DatosPersonales": {
+        "NombreCompleto": "Andrés Tobías Bonomo",
+        "Nacimiento": "21/4/1974",
+        "Profecion": "Tecnico",
+        "email": "andres74ar@gmail.com",
+        "ImagenDeFondo": "./assets/fondo.png",
+        "Foto": "./assets/cara.png",
+        "LugarDeTrabajo": "Autonomo",
+        "Localidad": "Santa Fe - La Capial (Argentina)"
+    },
+    "educacion": [
+        {
+            "institucion": "Instituto 1",
+            "titulo": "Titulo 1",
+            "logo": "",
+            "carrera": "Carrera 1",
+            "duracion": 6,
+            "ingreso": 2000,
+            "egreso": 2006
+        },
+        {
+            "institucion": "Instituto 2",
+            "titulo": "Titulo 2",
+            "logo": "",
+            "carrera": "Carrera 2",
+            "duracion": 6,
+            "ingreso": 2000,
+            "egreso": 2006
+        },
+        {
+            "institucion": "Instituto 3",
+            "titulo": "Titulo 3",
+            "logo": "",
+            "carrera": "Carrera 3",
+            "duracion": 6,
+            "ingreso": 2000,
+            "egreso": 2006
+        }
+    ],
+    "trabajo": [
+        {
+            "empresa": "Empresa 1",
+            "puesto": "Puesto 1",
+            "logo": "",
+            "lugar": "Lugar 1",
+            "duracion": 6,
+            "ingreso": 2000,
+            "egreso": 2006
+        },
+        {
+            "empresa": "Empresa 2",
+            "puesto": "Puesto 2",
+            "logo": "",
+            "lugar": "Lugar 2",
+            "duracion": 6,
+            "ingreso": 2000,
+            "egreso": 2006
+        },
+        {
+            "empresa": "Empresa 3",
+            "puesto": "Puesto 3",
+            "logo": "",
+            "lugar": "Lugar 3",
+            "duracion": 6,
+            "ingreso": 2000,
+            "egreso": 2006
+        }
+    ],
+    "programas": [
+        {
+            "name": "Corel Draw",
+            "width": "75"
+        },
+        {
+            "name": "PhotoShop",
+            "width": "75"
+        },
+        {
+            "name": "HTML",
+            "width": "75"
+        },
+        {
+            "name": "CSS",
+            "width": "75"
+        },
+        {
+            "name": "Bootstrap",
+            "width": "75"
+        },
+        {
+            "name": "javascrip",
+            "width": "75"
+        },
+        {
+            "name": "Typescript",
+            "width": "75"
+        },
+        {
+            "name": "Angular",
+            "width": "75"
+        },
+        {
+            "name": "Laravel",
+            "width": "75"
+        }
+    ]
+}

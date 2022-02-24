@@ -10,7 +10,7 @@
         </div>
         <div>
             <ul class="items-list">
-                <li>
+                <li *ngFor="let trabajoX of listaDeTrabajos">
                     <div class="data-container">
                         <a href="#">
                             <div class="logo-image-container">
@@ -18,10 +18,15 @@
                             </div>
                             <div class="list-info">
                                 <div>
-                                    <h3>un trabajo</h3>
-                                    <p>lugar de trabajo1- <samp>tipo de jornada</samp> </p>
-                                    <h4>inicio trabajo1- fin trabajo1-duracion trabajo1-</h4>
-                                    <h4>lugar, pais</h4>
+                                    <h3>{{trabajoX.empresa}}</h3>
+                                    <p>{{trabajoX.puesto}}- 
+                                        <samp>tipo de jornada</samp> 
+                                    </p>
+                                    <h4>{{trabajoX.ingreso}},
+                                        {{trabajoX.egreso}},
+                                        {{trabajoX.egreso-trabajoX.ingreso}}
+                                    </h4>
+                                    <h4>{{trabajoX.lugar}}</h4>
                                 </div>
                             </div>
                         </a>

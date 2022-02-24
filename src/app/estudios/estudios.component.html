@@ -10,55 +10,7 @@
         </div>
         <div>
             <ul class="items-list">
-                <li>
-                    <div class="data-container">
-                        <a href="#">
-                            <div class="logo-image-container">
-                                <img class="logo-image" src="./imagenes/logo1.png">
-                            </div>
-                            <div class="list-info">
-                                <div>
-                                    <h3>lugar de estudio 1</h3>
-                                    <p>titulo de lugar de estudio 1</p>
-                                    <p><time>año de egresado estudio 1 </time> - <time>año de egresado estudio 1
-                                        </time></p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="data-control">
-                        <div class="btn-edit">
-                            <a href="#">
-                                <i class="fa fa-pen"></i>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="data-container">
-                        <a href="#">
-                            <div class="logo-image-container">
-                                <img class="logo-image" src="./imagenes/logo1.png">
-                            </div>
-                            <div class="list-info">
-                                <div>
-                                    <h3>lugar de estudio 1</h3>
-                                    <p>titulo de lugar de estudio 1</p>
-                                    <p><time>año de egresado estudio 1 </time> - <time>año de egresado estudio 1
-                                        </time></p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="data-control">
-                        <div class="btn-edit">
-                            <a href="#">
-                                <i class="fa fa-pen"></i>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
+                <li *ngFor="let estudioX of listaDeEstudios">
                     <div class="data-container">
                         <a href="#">
                             <div class="logo-image-container">
@@ -66,10 +18,12 @@
                             </div>
                             <div class="list-info">
                                 <div>
-                                    <h3>lugar de estudio 1</h3>
+                                    <h3>{{estudioX.titulo}}</h3>
                                     <p>titulo de lugar de estudio 1</p>
-                                    <p><time>año de egresado estudio 1 </time> - <time>año de egresado estudio 1
-                                        </time></p>
+                                    <p>
+                                        <time>{{estudioX.ingreso}}</time> - 
+                                        <time>{{estudioX.egreso}}</time>
+                                    </p>
                                 </div>
                             </div>
                         </a>

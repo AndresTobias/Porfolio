@@ -10,9 +10,9 @@ listaDeEstudios:any;
   constructor(private datosPorfolio:DatosPorfolioService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      console.log(data.educacion)
-      this.listaDeEstudios=data.educacion;
+    this.datosPorfolio.obtenerDatosEducacion().subscribe(data =>{
+      console.log(data)
+      this.listaDeEstudios=data;
     });
   }
 

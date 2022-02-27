@@ -1,0 +1,77 @@
+{
+  "educacion": [
+    {
+        "institucion": "Instituto 1",
+        "titulo": "Titulo 1",
+        "logo": "./assets/imagenes/logo2.png",
+        "carrera": "Carrera 1",
+        "duracion": 6,
+        "ingreso": 2000,
+        "egreso": 2006
+    },
+    {
+        "institucion": "Instituto 2",
+        "titulo": "Titulo 2",
+        "logo": "./assets/imagenes/logo2.png",
+        "carrera": "Carrera 2",
+        "duracion": 6,
+        "ingreso": 2000,
+        "egreso": 2006
+    },
+    {
+        "institucion": "Instituto 3",
+        "titulo": "Titulo 3",
+        "logo": "./assets/imagenes/logo2.png",
+        "carrera": "Carrera 3",
+        "duracion": 6,
+        "ingreso": 2000,
+        "egreso": 2006
+    }
+],
+"trabajo": [
+  {
+      "empresa": "Empresa 1",
+      "puesto": "Puesto 1",
+      "logo": "./assets/imagenes/logo1.png",
+      "lugar": "Lugar 1",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
+  },
+  {
+      "empresa": "Empresa 2",
+      "puesto": "Puesto 2",
+      "logo": "./assets/imagenes/logo1.png",
+      "lugar": "Lugar 2",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
+  },
+  {
+      "empresa": "Empresa 3",
+      "puesto": "Puesto 3",
+      "logo": "./assets/imagenes/logo1.png",
+      "lugar": "Lugar 3",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
+  }
+],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

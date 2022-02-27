@@ -11,9 +11,9 @@ listaDeTrabajos:any;
   constructor(private datosPorfolio:DatosPorfolioService) { }
 
   ngOnInit():  void {
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      console.log(data.educacion)
-      this.listaDeTrabajos=data.trabajo;
+    this.datosPorfolio.obtenerDatosTrabajo().subscribe(data =>{
+      console.log(data)
+      this.listaDeTrabajos=data;
     });
   }
 

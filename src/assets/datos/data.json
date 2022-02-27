@@ -15,7 +15,8 @@
     },
     "ubicacion": "lugar",
     "about": "Acerca de",
-    "DatosPersonales": {
+    "DatosPersonales": 
+    {
         "NombreCompleto": "Andrés Tobías Bonomo",
         "Nacimiento": "21/4/1974",
         "Profecion": "Tecnico",

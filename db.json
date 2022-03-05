@@ -1,35 +1,39 @@
 {
   "educacion": [
     {
-        "institucion": "Instituto 1",
-        "titulo": "Titulo 1",
-        "logo": "./assets/imagenes/logo2.png",
-        "carrera": "Carrera 1",
-        "duracion": 6,
-        "ingreso": 2000,
-        "egreso": 2006
+      "id": 1,
+      "institucion": "Instituto 1",
+      "titulo": "Titulo 1",
+      "logo": "./assets/imagenes/logo2.png",
+      "carrera": "Carrera 1",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
     },
     {
-        "institucion": "Instituto 2",
-        "titulo": "Titulo 2",
-        "logo": "./assets/imagenes/logo2.png",
-        "carrera": "Carrera 2",
-        "duracion": 6,
-        "ingreso": 2000,
-        "egreso": 2006
+      "id": 2,
+      "institucion": "Instituto 2",
+      "titulo": "Titulo 2",
+      "logo": "./assets/imagenes/logo2.png",
+      "carrera": "Carrera 2",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
     },
     {
-        "institucion": "Instituto 3",
-        "titulo": "Titulo 3",
-        "logo": "./assets/imagenes/logo2.png",
-        "carrera": "Carrera 3",
-        "duracion": 6,
-        "ingreso": 2000,
-        "egreso": 2006
+      "id": 3,
+      "institucion": "Instituto 3",
+      "titulo": "Titulo 3",
+      "logo": "./assets/imagenes/logo2.png",
+      "carrera": "Carrera 3",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
     }
-],
-"trabajo": [
-  {
+  ],
+  "trabajo": [
+    {
+      "id": 1,
       "empresa": "Empresa 1",
       "puesto": "Puesto 1",
       "logo": "./assets/imagenes/logo1.png",
@@ -37,8 +41,9 @@
       "duracion": 6,
       "ingreso": 2000,
       "egreso": 2006
-  },
-  {
+    },
+    {
+      "id": 2,
       "empresa": "Empresa 2",
       "puesto": "Puesto 2",
       "logo": "./assets/imagenes/logo1.png",
@@ -46,8 +51,9 @@
       "duracion": 6,
       "ingreso": 2000,
       "egreso": 2006
-  },
-  {
+    },
+    {
+      "id": 3,
       "empresa": "Empresa 3",
       "puesto": "Puesto 3",
       "logo": "./assets/imagenes/logo1.png",
@@ -55,8 +61,8 @@
       "duracion": 6,
       "ingreso": 2000,
       "egreso": 2006
-  }
-],
+    }
+  ],
   "comments": [
     {
       "id": 1,

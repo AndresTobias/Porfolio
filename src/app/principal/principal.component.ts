@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosPorfolioService } from '../datos-porfolio.service';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-principal',
@@ -8,9 +9,13 @@ import { DatosPorfolioService } from '../datos-porfolio.service';
 })
 export class PrincipalComponent implements OnInit {
 miPorfolio:any;
-  constructor(private datosPorfolio:DatosPorfolioService) { }
+loginSi:any;
+  constructor(private datosPorfolio:DatosPorfolioService, private userService:UsersService) { }
 
   ngOnInit(): void {
+    this.loginSi = this.userService.getToken();
+    console.log(this.loginSi);
+    
     this.datosPorfolio.obtenerDatos().subscribe(data =>{
       console.log(data);
       this.miPorfolio=data;

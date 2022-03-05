@@ -8,12 +8,12 @@ import { PrincipalComponent } from './principal/principal.component';
 import { RegisterComponent } from './register/register.component';
 import { TrabajosComponent } from './trabajos/trabajos.component';
 const routes: Routes = [
-  { path: "", component: AppComponent, pathMatch: "full" },
-  { path: "login", component: LoginComponent, pathMatch: "full" },
-  { path: "register", component: RegisterComponent, pathMatch: "full" },
-  { path: 'principal', component: PrincipalComponent, pathMatch: "full" },
-  { path: 'trabajos', component: TrabajosComponent, pathMatch: "full" },
-  { path: 'acerca', component: AcercaDeComponent, pathMatch: "full" }
+  { path: "", component: AppComponent },
+  { path: "login", component: LoginComponent},
+  { path: "register", component: RegisterComponent},
+  { path: 'principal', component: PrincipalComponent},
+  { path: 'trabajos', component: TrabajosComponent },
+  { path: 'acerca', component: AcercaDeComponent }
 ];
 
 @NgModule({

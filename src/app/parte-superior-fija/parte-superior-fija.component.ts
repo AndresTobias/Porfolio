@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-parte-superior-fija',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParteSuperiorFijaComponent implements OnInit {
 
-  constructor() { }
+  loginSi: any;
+
+  constructor(private userService: UsersService) {
+  }
+
 
   ngOnInit(): void {
+    this.loginSi = this.userService.getToken();
+    console.log(this.loginSi);
   }
+
 
 }

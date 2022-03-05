@@ -5,9 +5,9 @@
     <div id="info" style="padding: 16px">
         <div id="info-img">
             <img class="profile-image" src="./assets/imagenes/cara.png">
-            <div class="btn-edit">
+            <div *ngIf="loginSi" class="btn-edit">
                 <a href="#" class="btn-right">
-                    <i class="fa fa-pen"></i>
+                    <i class="fa fa-pen"></i> 
                 </a>
             </div>
         </div>

@@ -32,5 +32,7 @@ getUserLogged(): Observable<any>{
 getUser() {
   return this.http.get("https://reqres.in/api/users/2");
 }
-
+logout(){ 
+  this.cookies.delete("token");
+}
 }

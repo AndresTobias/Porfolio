@@ -8,7 +8,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { RegisterComponent } from './register/register.component';
 import { TrabajosComponent } from './trabajos/trabajos.component';
 const routes: Routes = [
-  { path: "", component: AppComponent },
+ // { path: "", component: AppComponent },
   { path: "login", component: LoginComponent},
   { path: "register", component: RegisterComponent},
   { path: 'principal', component: PrincipalComponent},

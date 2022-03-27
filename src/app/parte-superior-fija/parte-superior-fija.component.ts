@@ -18,6 +18,8 @@ export class ParteSuperiorFijaComponent implements OnInit {
     this.loginSi = this.userService.getToken();
     console.log(this.loginSi);
   }
-
+  logout(){ 
+    this.loginSi = this.userService.logout();
+  }
 
 }

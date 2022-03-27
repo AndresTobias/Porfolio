@@ -11,15 +11,27 @@
             <li class="nav-item"><a href="#first-card" class="nav-link">Principal</a></li>
             <li class="nav-item"><a href="#estudios" class="nav-link">Estudios</a></li>
             <li class="nav-item"><a href="#trabajos" class="nav-link">Trabajos</a></li>
-            <li class="nav-item"><a href="/login" class="nav-link">Acerca de</a></li>
+            <li class="nav-item"><a href="#acerca" class="nav-link">Acerca de</a></li>
         </ul>
       
         <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2">Login</button>
+          <a *ngIf="!loginSi" href="/login" class="btn btn-primary">Login</a>
+          
+          <button 
+          *ngIf="loginSi"
+          type="button" 
+          class="btn btn-outline-primary me-2"
+          (click)="logout()"
+          >
+          Logout
+        </button>
+          <!--
           <button type="button" class="btn btn-primary">Sign-up</button>
+          -->
         </div>
     </header>
 </div>
+
 <div>
   <p>{{loginSi}}</p>
 </div>

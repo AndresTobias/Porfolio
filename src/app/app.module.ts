@@ -13,6 +13,8 @@ import { TrabajosComponent } from './trabajos/trabajos.component';
 import { EstudiosComponent } from './estudios/estudios.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { FormAcecaDeComponent } from './form-aceca-de/form-aceca-de.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { RegisterComponent } from './register/register.component';
     TrabajosComponent,
     EstudiosComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FormAcecaDeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

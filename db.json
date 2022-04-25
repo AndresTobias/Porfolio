@@ -79,5 +79,10 @@
   ],
   "profile": {
     "name": "typicode"
+  },
+  "acercaDe": {
+    "text1": "a",
+    "text2": "b",
+    "text3": "c"
   }
 }

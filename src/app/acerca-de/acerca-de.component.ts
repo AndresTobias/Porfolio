@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosPorfolioService } from '../datos-porfolio.service';
 import { AcercaDe } from '../AcercaDe';
+import { UsersService } from '../users.service';
 @Component({
   selector: 'app-acerca-de',
   templateUrl: './acerca-de.component.html',
@@ -11,9 +12,10 @@ text1:string="";//en el tuto lo iguala a 0
 text2:string="";
 text3:string="";
 newdate:AcercaDe[]=[];
-
-  datosAcercaDe:any;
-  constructor(private datosPorfolio:DatosPorfolioService) { }
+datosAcercaDe:any;
+edit:boolean=false;
+loginSi: any;
+  constructor(private datosPorfolio:DatosPorfolioService,private userService: UsersService) { }
 
   ngOnInit(): void {
     
@@ -21,6 +23,7 @@ newdate:AcercaDe[]=[];
       console.log(data);
       this.datosAcercaDe=data;
   });
+  this.loginSi = this.userService.getToken();
   }
   onSubmit()
   {
@@ -37,5 +40,7 @@ newdate:AcercaDe[]=[];
 
   this.datosPorfolio.formAcercaDe(nowdate).subscribe((nowdate)=>this.newdate.push(nowdate));
   }
-  
+  mostrar_formulario(){ 
+    this.edit = !this.edit;
+  }
 }

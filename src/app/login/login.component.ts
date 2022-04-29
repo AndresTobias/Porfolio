@@ -23,12 +23,25 @@ export class LoginComponent implements OnInit {
       data => {
         this.userService.setToken(data.token);
         this.loginSi=this.userService.getToken();
-        this.router.navigateByUrl('/');
+        //this.router.navigateByUrl('/');
         console.log(this.loginSi);
+        if(this.loginSi)
+      {
+      console.log("entra en el if");
+      window.location.reload();
+      this.router.navigateByUrl('/');
+      };
+        
       },
       error => {
         console.log(error);
       });
+      this.router.navigateByUrl('/');
+      this.irAlPrincipio();
   }
-  
+  irAlPrincipio(){
+  if (this.loginSi===0){
+    this.router.navigateByUrl('/');
+  } 
+  }
 }

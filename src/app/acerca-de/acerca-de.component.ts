@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DatosPorfolioService } from '../datos-porfolio.service';
 import { AcercaDe } from '../AcercaDe';
 import { UsersService } from '../users.service';
@@ -8,6 +8,7 @@ import { UsersService } from '../users.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
+  @Input() data!: string[];  
 text1:string="";//en el tuto lo iguala a 0
 text2:string="";
 text3:string="";
@@ -22,7 +23,9 @@ loginSi: any;
     this.datosPorfolio.obtenerDatosAcercaDe().subscribe(data =>{
       console.log(data);
       this.datosAcercaDe=data;
-  });
+      
+
+      });
   this.loginSi = this.userService.getToken();
   }
   onSubmit()
@@ -39,8 +42,10 @@ loginSi: any;
     console.log(nowdate);
 
   this.datosPorfolio.formAcercaDe(nowdate).subscribe((nowdate)=>this.newdate.push(nowdate));
-  }
+  
+}
   mostrar_formulario(){ 
     this.edit = !this.edit;
+    this.ngOnInit();
   }
 }

@@ -81,8 +81,18 @@
     "name": "typicode"
   },
   "acercaDe": {
-    "text1": "Nota 1",
+    "text1": "Nota 1 de campo 1",
     "text2": "Nota 2",
     "text3": "Nota 3"
+  },
+  "principal": {
+    "text1": "1",
+    "text2": "Nota 2",
+    "text3": "Nota 3",
+    "text4": "Nota 1 de campo 1",
+    "text5": "Nota 2",
+    "text6": "Nota 3",
+    "text7": "Nota 1 de campo 1",
+    "text8": "Nota 2"        
   }
 }

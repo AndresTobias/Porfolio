@@ -18,7 +18,7 @@ edit:boolean=false;
 loginSi: any;
   constructor(private datosPorfolio:DatosPorfolioService,private userService: UsersService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
     
     this.datosPorfolio.obtenerDatosAcercaDe().subscribe(data =>{
       console.log(data);

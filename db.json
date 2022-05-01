@@ -85,14 +85,16 @@
     "text2": "Nota 2",
     "text3": "Nota 3"
   },
-  "principal": {
-    "text1": "1",
-    "text2": "Nota 2",
-    "text3": "Nota 3",
-    "text4": "Nota 1 de campo 1",
-    "text5": "Nota 2",
-    "text6": "Nota 3",
-    "text7": "Nota 1 de campo 1",
-    "text8": "Nota 2"        
+  "principalImg": {
+    "text5": "./assets/imagenes/fondo.png",
+    "text6": "./assets/imagenes/cara.png",
+    "text7": "./assets/imagenes/logo1.png",
+    "text8": "./assets/imagenes/logo2.png"
+  },
+  "principalDato": {
+    "text1": "Nombre Apellido",
+    "text2": "Titulo",
+    "text3": "Cargo",
+    "text4": "Lugar "
   }
 }

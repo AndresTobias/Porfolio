@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AcercaDe } from './AcercaDe';
+import { Estudios } from './estudios';
 import { PrincipalImg } from './pricipalImg';
 import { PrincipalDato } from './principalDato';
 const httpOptions={
@@ -46,6 +47,9 @@ export class DatosPorfolioService {
   }
   formPrincipalImg(principalImg:PrincipalImg): Observable<PrincipalImg> {
     return this.http.post<PrincipalImg>('http://localhost:5000/principalImg',principalImg,httpOptions);
+  }
+  formEstudios(estudios:Estudios): Observable<Estudios> {
+    return this.http.post<Estudios>('http://localhost:5000/educacion',estudios,httpOptions);
   }
 }
 

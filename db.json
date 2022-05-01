@@ -29,6 +29,36 @@
       "duracion": 6,
       "ingreso": 2000,
       "egreso": 2006
+    },
+    {
+      "institucion": "uno",
+      "titulo": "dos",
+      "logo": "tres",
+      "id": 4
+    },
+    {
+      "institucion": "tres",
+      "titulo": "que",
+      "logo": "iuiu",
+      "id": 5
+    },
+    {
+      "institucion": "c1",
+      "titulo": "c2",
+      "logo": "c3",
+      "carrera": "c4",
+      "duracion": 6,
+      "id": 6
+    },
+    {
+      "institucion": "c1",
+      "titulo": "c2",
+      "logo": "c3",
+      "carrera": "c3",
+      "duracion": 5,
+      "ingreso": 2000,
+      "egreso": "2005",
+      "id": 7
     }
   ],
   "trabajo": [

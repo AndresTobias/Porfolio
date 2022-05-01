@@ -48,4 +48,4 @@ loginSi: any;
     this.edit = !this.edit;
     this.ngOnInit();
   }
-}
+} 

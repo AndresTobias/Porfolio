@@ -1,10 +1,11 @@
 <div class="mat-card" id="estudios">
     <div id="experiencia">
         <div class="card-titles">
-            <h2>Educacion</h2>
-            <div class="btn-edit">
-                <a href="#" class="btn-right">
+            <h2>Estudios</h2>
+            <div *ngIf="loginSi" class="btn-edit" (click)="mostrar_formularioadd()">
+                <a href="#formularioadd" class="btn-right">
                     <i class="fa fa-plus"></i>
+                    
                 </a>
             </div>
         </div>
@@ -19,11 +20,14 @@
                             <div class="list-info">
                                 <div>
                                     <h3>{{estudioX.titulo}}</h3>
-                                    <p>titulo de lugar de estudio 1</p>
+                                    <h4>{{estudioX.institucion}}</h4>
+                                    <p>{{estudioX.carrera}}</p>
+                                    <p>Duracion {{estudioX.duracion}} años</p>
                                     <p>
-                                        <time>{{estudioX.ingreso}}</time> - 
-                                        <time>{{estudioX.egreso}}</time>
+                                        <time>Ingreso {{estudioX.ingreso}}</time> - 
+                                        <time>Egreso {{estudioX.egreso}}</time>
                                     </p>
+                                    
                                 </div>
                             </div>
                         </a>
@@ -40,3 +44,43 @@
         </div>
     </div>
 </div>
+<form *ngIf="add" class="mat-card" id="formularioadd" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="text">institucion</label>
+        <input type="text" name="text" id="text1" placeholder="agregar algo 1"
+        [(ngModel)]="institucion">
+    </div>
+    <div>
+        <label for="text">Titulo</label>
+        <input type="text" name="text" id="text2" placeholder="agregar algo 2"
+        [(ngModel)]="titulo">
+    </div>
+    <div>
+        <label for="text">Logo</label>
+        <input type="text" name="text" id="text3" placeholder="agregar algo 3"
+        [(ngModel)]="logo">
+    </div>
+    <div>
+        <label for="text">Carrera</label>
+        <input type="text" name="text" id="text4" placeholder="agregar algo 4"
+        [(ngModel)]="carrera">
+    </div>
+    <div>
+        <label for="text">Duracion</label>
+        <input type="number" name="num" id="num1" placeholder="agregar algo 5"
+        [(ngModel)]="duracion">
+    </div>
+    <div>
+        <label for="text">Ingreso</label>
+        <input type="number" name="num" id="num2" placeholder="agregar algo 6"
+        [(ngModel)]="ingreso">
+    </div>
+    <div>
+        <label for="text">Egreso</label>
+        <input type="datetime" name="num" id="num3" placeholder="agregar algo 7"
+        [(ngModel)]="egreso">
+    </div>
+    {{institucion}},{{titulo}},{{logo}}
+    <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
+    <button type="button" class="btn btn-outline-primary me-2" (click)="mostrar_formularioadd()">Cerrar</button>
+</form>

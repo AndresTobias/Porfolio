@@ -21,44 +21,44 @@
       "egreso": 2006
     },
     {
-      "id": 3,
-      "institucion": "Instituto 3",
-      "titulo": "Titulo 3",
-      "logo": "./assets/imagenes/logo2.png",
-      "carrera": "Carrera 3",
-      "duracion": 6,
-      "ingreso": 2000,
-      "egreso": 2006
+      "institucion": "3",
+      "titulo": "3",
+      "logo": "3",
+      "carrera": "3",
+      "duracion": 3,
+      "ingreso": 3,
+      "egreso": "3",
+      "id": 3
     },
     {
-      "institucion": "uno",
-      "titulo": "dos",
-      "logo": "tres",
+      "institucion": "4",
+      "titulo": "4",
+      "logo": "4",
+      "carrera": "4",
+      "duracion": 4,
+      "ingreso": 4,
+      "egreso": "4",
       "id": 4
     },
     {
-      "institucion": "tres",
-      "titulo": "que",
-      "logo": "iuiu",
+      "institucion": "5",
+      "titulo": "5",
+      "logo": "5",
+      "carrera": "5",
+      "duracion": 5,
+      "ingreso": 5,
+      "egreso": "5",
       "id": 5
     },
     {
-      "institucion": "c1",
-      "titulo": "c2",
-      "logo": "c3",
-      "carrera": "c4",
+      "institucion": "6",
+      "titulo": "6",
+      "logo": "6",
+      "carrera": "6",
       "duracion": 6,
+      "ingreso": 6,
+      "egreso": "6",
       "id": 6
-    },
-    {
-      "institucion": "c1",
-      "titulo": "c2",
-      "logo": "c3",
-      "carrera": "c3",
-      "duracion": 5,
-      "ingreso": 2000,
-      "egreso": "2005",
-      "id": 7
     }
   ],
   "trabajo": [

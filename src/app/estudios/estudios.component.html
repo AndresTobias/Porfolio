@@ -13,7 +13,7 @@
             <ul class="items-list">
                 <li *ngFor="let estudioX of listaDeEstudios">
                     <div class="data-container">
-                        <a href="#">
+                        <a>
                             <div class="logo-image-container">
                                 <img class="logo-image" [src]="estudioX.logo">
                             </div>
@@ -27,24 +27,43 @@
                                         <time>Ingreso {{estudioX.ingreso}}</time> - 
                                         <time>Egreso {{estudioX.egreso}}</time>
                                     </p>
-                                    
+                                    <span>  
+                                    {{estudioX}},
+                                        
+                                    </span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="data-control">
-                        <div class="btn-edit">
-                            <a href="#">
+                        <div class="btn-edit" (click)="estudiox(estudioX.id)"> 
+                            <a>
+                                <i class="fa fa-pen-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                 <!--   <div class="data-control">
+                        <div class="btn-edit" (click)="editEstudio(estudioX)"> 
+                            <a>
                                 <i class="fa fa-pen"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                    <div class="data-control">
+                        <div class="btn-edit" (click)="deleteEstudio(estudioX)">
+                            <a>
+                                <i class="fa fa-eraser"></i>
                             </a>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
+        <p>{{idX}} mostrad id edit={{edit}} add={{add}}</p>
     </div>
 </div>
-<form *ngIf="add" class="mat-card" id="formularioadd" (ngSubmit)="onSubmit()">
+<!--Formulario-->
+<form *ngIf="add||edit" class="mat-card" id="formularioadd" (ngSubmit)="onSubmit()">
     <div>
         <label for="text">institucion</label>
         <input type="text" name="text" id="text1" placeholder="agregar algo 1"
@@ -82,5 +101,47 @@
     </div>
     {{institucion}},{{titulo}},{{logo}}
     <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
-    <button type="button" class="btn btn-outline-primary me-2" (click)="mostrar_formularioadd()">Cerrar</button>
+    <button type="button" class="btn btn-outline-primary me-2" (click)="cerrar_formulario()">Cerrar</button>
 </form>
+<!-- Formulario editar -->
+<!-- <form *ngIf="edit" class="mat-card" id="formularioedit" (ngSubmit)="onSubmit1()">
+    <div>
+        <h4>Editar</h4>
+        <label for="text">institucion</label>
+        <input type="text" name="text" id="text1" placeholder="institucion"
+        [(ngModel)]="institucion">
+    </div>
+    <div>
+        <label for="text">Titulo</label>
+        <input type="text" name="text" id="text2" placeholder="agregar algo 2"
+        [(ngModel)]="titulo">
+    </div>
+    <div>
+        <label for="text">Logo</label>
+        <input type="text" name="text" id="text3" placeholder="agregar algo 3"
+        [(ngModel)]="logo">
+    </div>
+    <div>
+        <label for="text">Carrera</label>
+        <input type="text" name="text" id="text4" placeholder="agregar algo 4"
+        [(ngModel)]="carrera">
+    </div>
+    <div>
+        <label for="text">Duracion</label>
+        <input type="number" name="num" id="num1" placeholder="agregar algo 5"
+        [(ngModel)]="duracion">
+    </div>
+    <div>
+        <label for="text">Ingreso</label>
+        <input type="number" name="num" id="num2" placeholder="agregar algo 6"
+        [(ngModel)]="ingreso">
+    </div>
+    <div>
+        <label for="text">Egreso</label>
+        <input type="number" name="num" id="num3" placeholder="agregar algo 7"
+        [(ngModel)]="egreso">
+    </div>
+    {{institucion}},{{titulo}},{{logo}}
+    <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
+    <button type="button" class="btn btn-outline-primary me-2" (click)="mostrar_formulario()">Cerrar</button>
+</form> -->

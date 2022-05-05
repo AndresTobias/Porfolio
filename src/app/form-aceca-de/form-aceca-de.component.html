@@ -1,33 +1,33 @@
 <!-- Button trigger modal -->
-
-  
-  
-
-
-
-<form class="mat-card"(ngSubmit)="onSubmit()">
-    <div>
-        <label for="text">tarea1</label>
-        <input type="text" name="text" id="text1" placeholder="agregar algo1"
-        [(ngModel)]="text1">
-    </div>
-    <div>
-        <label for="text">tarea2</label>
-        <input type="text" name="text" id="text2" placeholder="agregar algo2"
-        [(ngModel)]="text2">
-    </div>
-    <div>
-        <label for="text">tarea3</label>
-        <input type="text" name="text" id="text3" placeholder="agregar algo3"
-        [(ngModel)]="text3">
-    </div>
-    {{text1}},{{text2}},{{text3}}
-    <input type="submit" value="save" class="btn">
-    <button 
-          type="button" 
-          class="btn btn-outline-primary me-2"
-          
-          >
-          Logout
-        </button>
-</form>
+<div *ngFor="let item of lista">
+<div class="login">
+  <div  class="btn-edit" (click)="obtenerId(item)">
+    <a class="btn-right">
+        <i class="fa fa-pen"></i>
+    </a>
+</div>
+    <form class="custom-form" method="post">
+      <h1>Login</h1>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+        required="required"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        required="required"
+      />
+      
+      <button type="submit" (click)="login()">Log in</button>
+    </form>
+  </div>
+  <div>
+    <p>{{password}}</p>
+    <p>{{id}}</p>
+  </div>
+</div>

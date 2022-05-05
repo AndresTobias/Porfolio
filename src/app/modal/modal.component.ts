@@ -8,7 +8,7 @@ import { RecargaService } from '../recarga.service';
   styleUrls: ['./modal.component.css'],
 })
 export class ModalComponent implements OnInit {
-  @Input() items!: Observable<number>;
+  @Input() items!: Observable<number>; 
   counter = 0;
   dato:any;
   constructor(private ref:RecargaService,) { }

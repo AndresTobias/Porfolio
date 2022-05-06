@@ -1,18 +1,23 @@
-<div class="mat-card"id="trabajos">
-    <div id="experiencia">
+<div class="mat-card" >
+    <div id="trabajos">
         <div class="card-titles">
             <h2>Experiencia</h2>
-            <div class="btn-edit">
-                <a href="#" class="btn-right">
+            <div *ngIf="loginSi" class="btn-edit" (click)="mostrar_formularioadd()">
+                <a href="#formularioTrabajo" class="btn-right">
                     <i class="fa fa-plus"></i>
                 </a>
             </div>
+       <!--     <div class="btn-edit">
+                <a href="#" class="btn-right">
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div> -->
         </div>
         <div>
             <ul class="items-list">
                 <li *ngFor="let trabajoX of listaDeTrabajos">
                     <div class="data-container">
-                        <a href="#">
+                        <a>
                             <div class="logo-image-container">
                                 <img class="logo-image" [src]="trabajoX.logo">
                             </div>
@@ -31,18 +36,74 @@
                             </div>
                         </a>
                     </div>
-                    <div class="data-control">
+                    <div class="data-control" *ngIf="loginSi">
+                        <div class="btn-edit" (click)="trabajox(trabajoX.id)">
+                            <a href="#formularioTrabajo">
+                                <i class="fa fa-pen-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="data-control" *ngIf="loginSi">
+                        <div class="btn-edit" (click)="deleteEstudio(trabajoX)">
+                            <a>
+                                <i class="fa fa-eraser"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="data-control">
                         <div class="btn-edit">
                             <a href="#">
                                 <i class="fa fa-pen"></i>
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                 </li>
             </ul>
         </div>
+        
     </div>
-   
-
 </div>
+<div id="formularioTrabajo"></div>
+    <form *ngIf="add||edit" class="mat-card"  (ngSubmit)="onSubmit()">
+        <div *ngIf="edit">
+            <h4>Editar </h4>
+        </div>
+        <div *ngIf="add">
+            <h4>Agregar </h4>
+        </div>
+        <div>
+
+            <label for="text">Empresa</label>
+            <input type="text" name="text" id="text1" placeholder="agregar algo 1" [(ngModel)]="empresa">
+        </div>
+        <div>
+            <label for="text">Puesto</label>
+            <input type="text" name="text" id="text2" placeholder="agregar algo 2" [(ngModel)]="puesto">
+        </div>
+        <div>
+            <label for="text">Logo</label>
+            <input type="text" name="text" id="text3" placeholder="agregar algo 3" [(ngModel)]="logo">
+        </div>
+        <div>
+            <label for="text">Lugar</label>
+            <input type="text" name="text" id="text4" placeholder="agregar algo 4" [(ngModel)]="lugar">
+        </div>
+        <div>
+            <label for="text">Duracion</label>
+            <input type="number" name="num" id="num1" placeholder="agregar algo 5" [(ngModel)]="duracion">
+        </div>
+        <div>
+            <label for="text">Ingreso</label>
+            <input type="number" name="num" id="num2" placeholder="agregar algo 6" [(ngModel)]="ingreso">
+        </div>
+        <div>
+            <label for="text">Egreso</label>
+            <input type="datetime" name="num" id="num3" placeholder="agregar algo 7" [(ngModel)]="egreso">
+        </div>
+        <!--{{institucion}},{{titulo}},{{logo}}-->
+        <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
+        <button type="button" class="btn btn-outline-primary me-2" (click)="cerrar_formulario()">Cerrar</button>
+    </form>
+    
+
 

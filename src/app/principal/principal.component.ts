@@ -21,7 +21,7 @@ export class PrincipalComponent implements OnInit {
   newdate:PrincipalDato[]=[];
   newdateImg:PrincipalImg[]=[];
   datosPrincipal:any;
-  miDatoPrincipal:any;
+  miDatoPrincipal!:any;
   miImgPrincipal:any;
   loginSi:any;
   edit:boolean=false;

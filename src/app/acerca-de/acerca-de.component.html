@@ -10,11 +10,11 @@
     </div>
     <div>
         <h3>Campo 1:</h3>
-        <h4>{{datosAcercaDe.text1}}</h4>
+        <h4>{{datosAcercaDe[0].text1}}</h4>
         <h3>Campo 2:</h3>
-        <h4>{{datosAcercaDe.text2}}</h4>
+        <h4>{{datosAcercaDe[0].text2}}</h4>
         <h3>Campo 3:</h3>
-        <h4>{{datosAcercaDe.text3}}</h4>
+        <h4>{{datosAcercaDe[0].text3}}</h4>
     </div>
     <!--formulario se muestra con la funcion edit  -->
     <form *ngIf="edit"class="mat-card"(ngSubmit)="onSubmit()">

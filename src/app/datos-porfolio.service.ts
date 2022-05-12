@@ -17,9 +17,9 @@ const httpOptions = {
 export class DatosPorfolioService {
   private apiUrlEst = 'http://localhost:5000/educacion'
   private apiUrlTrab = 'http://localhost:5000/trabajo'
-  private apiUrlAcercaDe='http://localhost:5000/acercaDe'
-  private apiUrlPrincipalDatos ='http://localhost:5000/principalDato'//'http://localhost:8080/api/personData/all'
-  private apiUrlPrincipalImagenes ='http://localhost:5000/principalImg'
+  private apiUrlAcercaDe='http://localhost:8080/api/acercaDe/all' //'http://localhost:5000/acercaDe'
+  private apiUrlPrincipalDatos ='http://localhost:8080/api/personData/all'//'http://localhost:5000/principalDato'
+  private apiUrlPrincipalImagenes ='http://localhost:8080/api/personImg/all'//'http://localhost:5000/principalImg'
   constructor(private http: HttpClient) { }
 
 
@@ -28,7 +28,8 @@ export class DatosPorfolioService {
     return this.http.get(this.apiUrlAcercaDe);
   }
   formAcercaDe(acercaDe: AcercaDe): Observable<AcercaDe> {
-    return this.http.post<AcercaDe>(this.apiUrlAcercaDe, acercaDe, httpOptions);
+    return this.http.post<AcercaDe>('http://localhost:8080/api/acercaDe', acercaDe, httpOptions);
+  
   }
   //      <<Fin de acerca de>>
 
@@ -40,11 +41,11 @@ export class DatosPorfolioService {
     return this.http.get(this.apiUrlPrincipalImagenes);
   }
   formPrincipalDato(principalDato: PrincipalDato): Observable<PrincipalDato> {
-    return this.http.post<PrincipalDato>(this.apiUrlPrincipalDatos, principalDato, httpOptions);
+    return this.http.post<PrincipalDato>('http://localhost:8080/api/personData', principalDato, httpOptions);
   }
 
   formPrincipalImg(principalImg: PrincipalImg): Observable<PrincipalImg> {
-    return this.http.post<PrincipalImg>(this.apiUrlPrincipalImagenes, principalImg, httpOptions);
+    return this.http.post<PrincipalImg>('http://localhost:8080/api/personImg', principalImg, httpOptions);
   }
   //      <<Fin de Principal>>  
 

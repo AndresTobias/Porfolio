@@ -1,12 +1,12 @@
 <div class="mat-card" id="first-card">
     <div id="profile-background">
        <!-- <img src="./assets/imagenes/fondo.png"> -->
-      <img [src]="miImgPrincipal.text5">
+      <img [src]="miImgPrincipal[0].text5">
       
     </div>
     <div id="info" style="padding: 16px">
         <div id="info-img">
-            <img class="profile-image" [src]="miImgPrincipal.text6">
+            <img class="profile-image" [src]="miImgPrincipal[0].text6">
             <div *ngIf="loginSi" class="btn-edit" (click)="mostrar_formulario()">
                 <a class="btn-right">
                     <i class="fa fa-pen"></i>
@@ -20,24 +20,24 @@
         </div>
         <div id="info-data">
             <div>
-                <h1>{{miDatoPrincipal.text1}}</h1>
+                <h1>{{miDatoPrincipal[0].text1}}</h1>
             <div>
-                 <h2>{{miDatoPrincipal.text2}}</h2>
+                 <h2>{{miDatoPrincipal[0].text2}}</h2>
             </div>
             <div>
-                 <h6>{{miDatoPrincipal.text3}}</h6>
+                 <h6>{{miDatoPrincipal[0].text3}}</h6>
             </div>
             <div>
-                <h6>{{miDatoPrincipal.text4}}</h6>
+                <h6>{{miDatoPrincipal[0].text4}}</h6>
            </div>
         </div>
             <ul id="info-details">
                 <li><a href="#">
-                        <img [src]="miImgPrincipal.text7">
+                        <img [src]="miImgPrincipal[0].text7">
                         <h2>TRABAJO EN CASA</h2>
                     </a></li>
                 <li><a href="#">
-                        <img [src]="miImgPrincipal.text8">
+                        <img [src]="miImgPrincipal[0].text8">
                         <h2>TRABAJO EN CASA SI QUIERO</h2>
                     </a></li>
             </ul>

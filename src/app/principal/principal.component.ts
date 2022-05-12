@@ -10,6 +10,7 @@ import { UsersService } from '../users.service';
   styleUrls: ['./principal.component.css'],
 })
 export class PrincipalComponent implements OnInit {
+  id:number=1;
   text1:string="";//en el tuto lo iguala a 0
   text2:string="";
   text3:string="";
@@ -51,8 +52,8 @@ export class PrincipalComponent implements OnInit {
     //if(this.text2.length===0){   --este if era para cuando iguala a 0 las variables--
     //  alert("text en 0");
     // }
-  var{text1,text2,text3,text4}=this;
-  var nowdate={text1,text2,text3,text4};
+  var{id,text1,text2,text3,text4}=this;
+  var nowdate={id,text1,text2,text3,text4};
     console.log(nowdate);
 
   this.datosPorfolio.formPrincipalDato(nowdate).subscribe((nowdate)=>this.newdate.push(nowdate));
@@ -66,8 +67,8 @@ export class PrincipalComponent implements OnInit {
     //if(this.text2.length===0){   --este if era para cuando iguala a 0 las variables--
     //  alert("text en 0");
     // }
-  var{text5,text6,text7,text8}=this;
-  var nowdateImg={text5,text6,text7,text8};
+  var{id,text5,text6,text7,text8}=this;
+  var nowdateImg={id,text5,text6,text7,text8};
     console.log(nowdateImg);
 
   this.datosPorfolio.formPrincipalImg(nowdateImg).subscribe((nowdateImg)=>this.newdateImg.push(nowdateImg));

@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DatosPorfolioService {
-  private apiUrlEst = 'http://localhost:5000/educacion'
+  private apiUrlEst = 'http://localhost:8080/api/estudios/all'//'http://localhost:5000/educacion'
   private apiUrlTrab = 'http://localhost:5000/trabajo'
   private apiUrlAcercaDe='http://localhost:8080/api/acercaDe/all' //'http://localhost:5000/acercaDe'
   private apiUrlPrincipalDatos ='http://localhost:8080/api/personData/all'//'http://localhost:5000/principalDato'
@@ -54,16 +54,20 @@ export class DatosPorfolioService {
     return this.http.get(this.apiUrlEst);
   }
   formEstudios(estudios: Estudios): Observable<Estudios> {
-    return this.http.post<Estudios>(this.apiUrlEst, estudios, httpOptions);
+    return this.http.post<Estudios>('http://localhost:8080/api/estudios', estudios, httpOptions);
   }
   deleteEstudio(estudio: Estudios): Observable<Estudios> {
-    const url = `${this.apiUrlEst}/${estudio.id}`
+    const url = `${'http://localhost:8080/api/estudios'}/${estudio.id}`
     return this.http.delete<Estudios>(url)
   }
-  editEstudio(estudios: Estudios): Observable<Estudios> {
-    const url = `${this.apiUrlEst}/${estudios.id}`
-    return this.http.put<Estudios>(url, estudios, httpOptions)
+  editEstudio(estudios: Estudios): Observable<Estudios>{
+    return this.http.post<Estudios>('http://localhost:8080/api/estudios', estudios, httpOptions);
   }
+  
+  /*editEstudio(estudios: Estudios): Observable<Estudios> {
+    const url = `${'http://localhost:8080/api/estudios'}/${estudios}`
+    return this.http.put<Estudios>(url, estudios, httpOptions)
+  }*/
   //      <<Fin de Educacion>>
 
 

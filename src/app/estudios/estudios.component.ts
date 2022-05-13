@@ -106,6 +106,8 @@ export class EstudiosComponent implements OnInit {
   deleteEstudio(estudio: Estudios) {
     this.datosPorfolio.deleteEstudio(estudio)
       .subscribe(() => { this.ngOnInit() });
+      this.ngOnInit();
+      
   }
   editEstudio(estudio: Estudios) {
     estudio.id = this.idX;

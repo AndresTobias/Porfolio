@@ -16,7 +16,7 @@ const httpOptions = {
 })
 export class DatosPorfolioService {
   private apiUrlEst = 'http://localhost:8080/api/estudios/all'//'http://localhost:5000/educacion'
-  private apiUrlTrab = 'http://localhost:5000/trabajo'
+  private apiUrlTrab = 'http://localhost:8080/api/trabajos/all'//'http://localhost:5000/trabajo'
   private apiUrlAcercaDe='http://localhost:8080/api/acercaDe/all' //'http://localhost:5000/acercaDe'
   private apiUrlPrincipalDatos ='http://localhost:8080/api/personData/all'//'http://localhost:5000/principalDato'
   private apiUrlPrincipalImagenes ='http://localhost:8080/api/personImg/all'//'http://localhost:5000/principalImg'
@@ -56,12 +56,12 @@ export class DatosPorfolioService {
   formEstudios(estudios: Estudios): Observable<Estudios> {
     return this.http.post<Estudios>('http://localhost:8080/api/estudios', estudios, httpOptions);
   }
+  editEstudio(estudio: Estudios): Observable<Estudios>{
+    return this.http.post<Estudios>('http://localhost:8080/api/estudios', estudio, httpOptions);
+  }
   deleteEstudio(estudio: Estudios): Observable<Estudios> {
     const url = `${'http://localhost:8080/api/estudios'}/${estudio.id}`
     return this.http.delete<Estudios>(url)
-  }
-  editEstudio(estudios: Estudios): Observable<Estudios>{
-    return this.http.post<Estudios>('http://localhost:8080/api/estudios', estudios, httpOptions);
   }
   
   /*editEstudio(estudios: Estudios): Observable<Estudios> {
@@ -76,14 +76,13 @@ export class DatosPorfolioService {
     return this.http.get(this.apiUrlTrab);
   }
   formTrabajo(trabajo:Trabajo): Observable<Trabajo> {
-    return this.http.post<Trabajo>(this.apiUrlTrab, trabajo, httpOptions);
+    return this.http.post<Trabajo>('http://localhost:8080/api/trabajos', trabajo, httpOptions);
   }
   editTrabajo(trabajo:Trabajo): Observable<Trabajo> {
-    const url = `${this.apiUrlTrab}/${trabajo.id}`
-    return this.http.put<Trabajo>(url, trabajo, httpOptions)
+    return this.http.post<Trabajo>('http://localhost:8080/api/trabajos', trabajo, httpOptions);
   }
   deleteTrabajo(trabajo: Trabajo): Observable<Trabajo> {
-    const url = `${this.apiUrlTrab}/${trabajo.id}`
+    const url = `${'http://localhost:8080/api/trabajos'}/${trabajo.id}`
     return this.http.delete<Trabajo>(url)
   }
   //      <<Fin de Trabajos>>

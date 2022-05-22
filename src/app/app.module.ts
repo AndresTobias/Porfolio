@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormAcecaDeComponent } from './form-aceca-de/form-aceca-de.component';
 import { ModalComponent } from './modal/modal.component';
+import { interceptorProvider } from './interceptor.service';
+import { PorfolioComponent } from './porfolio/porfolio.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { ModalComponent } from './modal/modal.component';
     LoginComponent,
     RegisterComponent,
     FormAcecaDeComponent,
-    ModalComponent
+    ModalComponent,
+    PorfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { ModalComponent } from './modal/modal.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [CookieService],
+  providers: [CookieService,interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

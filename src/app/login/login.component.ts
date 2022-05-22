@@ -8,6 +8,7 @@ import { Token } from '@angular/compiler';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  nombreUsuario!:string;
   email!: string;
   password!: string;
   loginSi!:any;
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
   
   login() {
-    const user = { email: this.email, password: this.password };
+    const user = { nombreUsuario: this.email, password: this.password };
     this.userService.login(user).subscribe(
       data => {
         this.userService.setToken(data.token);
@@ -28,8 +29,8 @@ export class LoginComponent implements OnInit {
         if(this.loginSi)
       {
       console.log("entra en el if");
-      window.location.reload();
-      this.router.navigateByUrl('/');
+      //window.location.reload();
+      this.router.navigateByUrl('/porfolio');
       };
         
       },

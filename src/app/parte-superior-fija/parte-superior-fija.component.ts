@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { RecargaService } from '../recarga.service';
 import { UsersService } from '../users.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-parte-superior-fija',
   templateUrl: './parte-superior-fija.component.html',
@@ -12,7 +12,7 @@ export class ParteSuperiorFijaComponent implements OnInit {
 
   loginSi: any;
 
-  constructor(private userService: UsersService, private ref:RecargaService) {
+  constructor(private userService: UsersService, private ref:RecargaService,private router:Router) {
   }
 
 
@@ -23,7 +23,8 @@ export class ParteSuperiorFijaComponent implements OnInit {
   }
   logout(){ 
     this.loginSi = this.userService.logout();
-    window.location.reload();
+    //window.location.reload();
+    this.router.navigateByUrl('/');
   }
 
 }

@@ -17,7 +17,8 @@ import { FormAcecaDeComponent } from './form-aceca-de/form-aceca-de.component';
 import { ModalComponent } from './modal/modal.component';
 import { interceptorProvider } from './interceptor.service';
 import { PorfolioComponent } from './porfolio/porfolio.component';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { TortasComponent } from './tortas/tortas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,13 +31,15 @@ import { PorfolioComponent } from './porfolio/porfolio.component';
     RegisterComponent,
     FormAcecaDeComponent,
     ModalComponent,
-    PorfolioComponent
+    PorfolioComponent,
+    TortasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [CookieService,interceptorProvider],
   bootstrap: [AppComponent]

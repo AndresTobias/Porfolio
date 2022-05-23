@@ -13,7 +13,7 @@ export class AcercaDeComponent implements OnInit {
   text1: string = "";//en el tuto lo iguala a 0
   text2: string = "";
   text3: string = "";
-  newdate: AcercaDe[] = [];
+  newdate: AcercaDe[] = []; 
   datosAcercaDe: any;
   edit: boolean = false;
   loginSi: any;

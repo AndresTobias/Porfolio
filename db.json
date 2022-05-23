@@ -51,6 +51,38 @@
       "egreso": 2006
     }
   ],
+"tortas": [
+    {
+      "id": 1,
+      "titulo": "Titulo 1",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 25
+    },
+    {
+      "id": 2,
+      "titulo": "Titulo 2",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 50
+    },
+    {
+      "id": 3,
+      "titulo": "Titulo 3",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 75
+    },
+    {
+      "id": 4,
+      "titulo": "Titulo 4",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 100
+    },
+    {
+      "id": 5,
+      "titulo": "Titulo 5",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 50
+    }
+  ],
   "trabajo": [
     {
       "id": 1,

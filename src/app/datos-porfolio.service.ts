@@ -20,6 +20,7 @@ export class DatosPorfolioService {
   private apiUrlAcercaDe='http://localhost:8080/api/acercaDe/all' //'http://localhost:5000/acercaDe'
   private apiUrlPrincipalDatos ='http://localhost:8080/api/personData/all'//'http://localhost:5000/principalDato'
   private apiUrlPrincipalImagenes ='http://localhost:8080/api/personImg/all'//'http://localhost:5000/principalImg'
+  private apiUrlTortas = 'http://localhost:5000/tortas'//'http://localhost:8080/api/estudios/all'
   constructor(private http: HttpClient) { }
 
 
@@ -86,7 +87,10 @@ export class DatosPorfolioService {
     return this.http.delete<Trabajo>(url)
   }
   //      <<Fin de Trabajos>>
-
-
+//      <<Todo de Tortas>> 
+obtenerDatosTortas(): Observable<any> {
+  return this.http.get(this.apiUrlTortas);
+}
+//      <<Fin de Tortas>>
 }
 

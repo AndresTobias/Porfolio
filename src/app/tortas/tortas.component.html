@@ -23,7 +23,7 @@
         ></circle-progress>
 </div>
         <p></p>
-        <div class="btn-edit" (click)="mostrar_formulario()">
+        <div class="btn-edit" (click)="mostrar_formulario1()">
             <a class="btn-right">
                 <i class="fa fa-pen"></i>
             </a>
@@ -51,7 +51,7 @@
         </div>
 
         <p></p>
-        <div class="btn-edit" (click)="mostrar_formulario()">
+        <div class="btn-edit" (click)="mostrar_formulario2()">
             <a class="btn-right">
                 <i class="fa fa-pen"></i>
             </a>
@@ -78,7 +78,7 @@
         ></circle-progress>
         </div>
         <p></p>
-        <div class="btn-edit" (click)="mostrar_formulario()">
+        <div class="btn-edit" (click)="mostrar_formulario3()">
             <a class="btn-right">
                 <i class="fa fa-pen"></i>
             </a>
@@ -87,3 +87,28 @@
     </div>
   </div>
 </div>
+<!--                                     Formulario                                               -->
+<form *ngIf="edit" class="mat-card"  (ngSubmit)="onSubmit()">
+    <div>
+        <h4>Editar </h4>
+    </div>
+    <div>
+        <label for="text">Titulo</label>
+        <input type="text" name="text" id="titulo" placeholder="Titulo" [(ngModel)]="titulo">
+    </div>
+    <!--<div>
+        <label for="text">Logo</label>
+        <input type="text" name="text" id="logo" placeholder="Logo" [(ngModel)]="logo">
+    </div> -->
+    <div>
+        <label for="text">Progreso</label>
+        <input type="number" name="progreso" id="progreso" placeholder="Progreso" [(ngModel)]="progreso">
+    </div>
+    {{titulo}},{{progreso}},{{logo}}
+    <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
+    <button type="button" 
+    class="btn btn-outline-primary me-2" 
+    (click)="mostrar_formulario1()">
+    Cerrar
+    </button>
+</form>

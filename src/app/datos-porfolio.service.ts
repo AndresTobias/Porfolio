@@ -5,6 +5,7 @@ import { AcercaDe } from './AcercaDe';
 import { Estudios } from './estudios';
 import { PrincipalImg } from './pricipalImg';
 import { PrincipalDato } from './principalDato';
+import { Tortas } from './Torta';
 import { Trabajo } from './Trabajo';
 const httpOptions = {
   headers: new HttpHeaders({
@@ -90,6 +91,9 @@ export class DatosPorfolioService {
 //      <<Todo de Tortas>> 
 obtenerDatosTortas(): Observable<any> {
   return this.http.get(this.apiUrlTortas);
+}
+editTorta(torta: Tortas): Observable<Tortas>{
+  return this.http.post<Tortas>('http://localhost:5000/tortas', torta, httpOptions);
 }
 //      <<Fin de Tortas>>
 }

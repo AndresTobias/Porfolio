@@ -93,18 +93,20 @@
         <h4>Editar </h4>
     </div>
     <div>
-        <label for="text">Titulo</label>
+        <label for="text"><h4>Titulo</h4></label><div>
         <input type="text" name="text" id="titulo" placeholder="Titulo" [(ngModel)]="titulo">
+        </div>
     </div>
     <!--<div>
         <label for="text">Logo</label>
         <input type="text" name="text" id="logo" placeholder="Logo" [(ngModel)]="logo">
     </div> -->
     <div>
-        <label for="text">Progreso</label>
+        <label for="text"><h4>Progreso</h4></label><div>
         <input type="number" name="progreso" id="progreso" placeholder="Progreso" [(ngModel)]="progreso">
     </div>
-    {{titulo}},{{progreso}},{{logo}}
+    </div>
+    <!--{{titulo}},{{progreso}},{{logo}}-->
     <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
     <button type="button" 
     class="btn btn-outline-primary me-2" 

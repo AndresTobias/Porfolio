@@ -1,7 +1,7 @@
 <div class="mat-card" id="acerca">
     <div class="card-titles">
         <h2>Acerca de</h2>
-            <!--Boton de editar se muestra con la variable loginSi-->
+        <!--Boton de editar se muestra con la variable loginSi-->
         <div *ngIf="loginSi" class="btn-edit" (click)="mostrar_formulario()">
             <a class="btn-right">
                 <i class="fa fa-pen"></i>
@@ -17,25 +17,34 @@
         <h4>{{datosAcercaDe[0].text3}}</h4>
     </div>
     <!--formulario se muestra con la funcion edit  -->
-    <form *ngIf="edit"class="mat-card"(ngSubmit)="onSubmit()">
+    <form *ngIf="edit" class="mat-card" (ngSubmit)="onSubmit()">
         <div>
-            <label for="text">tarea1</label>
-            <input type="text" name="text" id="text1" placeholder="agregar algo1"
-            [(ngModel)]="text1">
+            <label for="text">
+                <h4>Campo 1</h4>
+            </label>
+            <div>
+                <input type="text" name="text" id="text1" placeholder="agregar algo1" [(ngModel)]="text1">
+            </div>
         </div>
         <div>
-            <label for="text">tarea2</label>
-            <input type="text" name="text" id="text2" placeholder="agregar algo2"
-            [(ngModel)]="text2">
+            <label for="text">
+                <h4>Campo 2</h4>
+            </label>
+            <div>
+                <input type="text" name="text" id="text2" placeholder="agregar algo2" [(ngModel)]="text2">
+            </div>
         </div>
         <div>
-        <label for="text">tarea3</label>
-        <input type="text" name="text" id="text3" placeholder="agregar algo3"
-        [(ngModel)]="text3">
+            <label for="text">
+                <h4>Campo 3</h4>
+            </label>
+            <div>
+                <input type="text" name="text" id="text3" placeholder="agregar algo3" [(ngModel)]="text3">
+            </div>
         </div>
         <!--<p>{{text1}},{{text2}},{{text3}}</p>-->
         <button type="button" class="btn btn-outline-primary me-2" (click)="mostrar_formulario()">Cerrar</button>
         <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
-     </form>
+    </form>
 
-</div> 
+</div>

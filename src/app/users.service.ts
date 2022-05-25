@@ -16,9 +16,9 @@ login(user:any): Observable<any>{
   //return this.http.post("https://reqres.in/api/login", user)
 }
 
-register(user: any): Observable<any> {
-  return this.http.post("https://reqres.in/api/register", user);
-}
+//register(user: any): Observable<any> {
+//  return this.http.post("https://reqres.in/api/register", user);
+//}
 setToken(token: any) {
   this.cookies.set("token", token);
 }
@@ -30,9 +30,9 @@ getUserLogged(): Observable<any>{
   const token = this.getToken();
   return this.token;
 }
-getUser() {
-  return this.http.get("https://reqres.in/api/users/2");
-}
+//getUser() {
+//  return this.http.get("https://reqres.in/api/users/2");
+//}
 logout(){ 
   this.cookies.delete("token");
 }

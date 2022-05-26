@@ -1,35 +1,91 @@
 {
   "educacion": [
     {
-        "institucion": "Instituto 1",
-        "titulo": "Titulo 1",
-        "logo": "./assets/imagenes/logo2.png",
-        "carrera": "Carrera 1",
-        "duracion": 6,
-        "ingreso": 2000,
-        "egreso": 2006
+      "id": 1,
+      "institucion": "Instituto 1",
+      "titulo": "Titulo 1",
+      "logo": "./assets/imagenes/logo2.png",
+      "carrera": "Carrera 1",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
     },
     {
-        "institucion": "Instituto 2",
-        "titulo": "Titulo 2",
-        "logo": "./assets/imagenes/logo2.png",
-        "carrera": "Carrera 2",
-        "duracion": 6,
-        "ingreso": 2000,
-        "egreso": 2006
+      "id": 2,
+      "institucion": "Instituto 2",
+      "titulo": "Titulo 2",
+      "logo": "./assets/imagenes/logo2.png",
+      "carrera": "Carrera 2",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
     },
     {
-        "institucion": "Instituto 3",
-        "titulo": "Titulo 3",
-        "logo": "./assets/imagenes/logo2.png",
-        "carrera": "Carrera 3",
-        "duracion": 6,
-        "ingreso": 2000,
-        "egreso": 2006
+      "id": 3,
+      "institucion": "Instituto 3",
+      "titulo": "Titulo 3",
+      "logo": "./assets/imagenes/logo2.png",
+      "carrera": "Carrera 3",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
+    },
+    {
+      "id": 4,
+      "institucion": "Instituto 4",
+      "titulo": "Titulo 4",
+      "logo": "./assets/imagenes/logo2.png",
+      "carrera": "Carrera 4",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
+    },
+    {
+      "id": 5,
+      "institucion": "Instituto 5",
+      "titulo": "Titulo 5",
+      "logo": "./assets/imagenes/logo2.png",
+      "carrera": "Carrera 5",
+      "duracion": 6,
+      "ingreso": 2000,
+      "egreso": 2006
     }
-],
-"trabajo": [
-  {
+  ],
+"tortas": [
+    {
+      "id": 1,
+      "titulo": "Titulo 1",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 25
+    },
+    {
+      "id": 2,
+      "titulo": "Titulo 2",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 50
+    },
+    {
+      "id": 3,
+      "titulo": "Titulo 3",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 75
+    },
+    {
+      "id": 4,
+      "titulo": "Titulo 4",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 100
+    },
+    {
+      "id": 5,
+      "titulo": "Titulo 5",
+      "logo": "./assets/imagenes/logo2.png",
+      "progreso": 50
+    }
+  ],
+  "trabajo": [
+    {
+      "id": 1,
       "empresa": "Empresa 1",
       "puesto": "Puesto 1",
       "logo": "./assets/imagenes/logo1.png",
@@ -37,8 +93,9 @@
       "duracion": 6,
       "ingreso": 2000,
       "egreso": 2006
-  },
-  {
+    },
+    {
+      "id": 2,
       "empresa": "Empresa 2",
       "puesto": "Puesto 2",
       "logo": "./assets/imagenes/logo1.png",
@@ -46,8 +103,9 @@
       "duracion": 6,
       "ingreso": 2000,
       "egreso": 2006
-  },
-  {
+    },
+    {
+      "id": 3,
       "empresa": "Empresa 3",
       "puesto": "Puesto 3",
       "logo": "./assets/imagenes/logo1.png",
@@ -55,8 +113,8 @@
       "duracion": 6,
       "ingreso": 2000,
       "egreso": 2006
-  }
-],
+    }
+  ],
   "comments": [
     {
       "id": 1,
@@ -73,5 +131,22 @@
   ],
   "profile": {
     "name": "typicode"
+  },
+  "acercaDe": {
+    "text1": "Nota 1 de campo 1",
+    "text2": "Nota 2",
+    "text3": "Nota 3"
+  },
+  "principalImg": {
+    "text5": "./assets/imagenes/fondo.png",
+    "text6": "./assets/imagenes/cara.png",
+    "text7": "./assets/imagenes/logo1.png",
+    "text8": "./assets/imagenes/logo2.png"
+  },
+  "principalDato": {
+    "text1": "Nombre Apellido",
+    "text2": "Titulo",
+    "text3": "Cargo",
+    "text4": "Lugar "
   }
 }

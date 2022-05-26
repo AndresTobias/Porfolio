@@ -1,0 +1,116 @@
+<div class="mat-card" id="tortas">
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Tortas</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
+        </div>
+        <h2>{{datosTortas[0].titulo}}</h2>
+        <div class="text-center">
+        <circle-progress
+            [percent]="datosTortas[0].progreso"
+            [radius]="100"
+            [title]="datosTortas[0].titulo"
+            [titleFontSize]="'30'"
+            [showUnits]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#0B3FF5'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+</div>
+        <p></p>
+        <div class="btn-edit" (click)="mostrar_formulario1()">
+            <a class="btn-right">
+                <i class="fa fa-pen"></i>
+            </a>
+        </div>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+        </div>
+        <h2>{{datosTortas[1].titulo}}</h2>
+        <div class="text-center">
+        <circle-progress
+            [percent]="datosTortas[1].progreso"
+            [radius]="100"
+            [title]="datosTortas[1].titulo"
+            [titleFontSize]="'30'"
+            [showUnits]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#2bf50b'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+        </div>
+
+        <p></p>
+        <div class="btn-edit" (click)="mostrar_formulario2()">
+            <a class="btn-right">
+                <i class="fa fa-pen"></i>
+            </a>
+        </div>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+        </div>
+        <h2>{{datosTortas[2].titulo}}</h2>
+        <div class="text-center">
+        <circle-progress
+            [percent]="datosTortas[2].progreso"
+            [radius]="100"
+            [title]="datosTortas[2].titulo"
+            [titleFontSize]="'30'"
+            [showUnits]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#F50B3A'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+        </div>
+        <p></p>
+        <div class="btn-edit" (click)="mostrar_formulario3()">
+            <a class="btn-right">
+                <i class="fa fa-pen"></i>
+            </a>
+        </div>
+     </div>
+    </div>
+  </div>
+</div>
+<!--                                     Formulario                                               -->
+<form *ngIf="edit" class="mat-card"  (ngSubmit)="onSubmit()">
+    <div>
+        <h4>Editar </h4>
+    </div>
+    <div>
+        <label for="text"><h4>Titulo</h4></label><div>
+        <input type="text" name="text" id="titulo" placeholder="Titulo" [(ngModel)]="titulo">
+        </div>
+    </div>
+    <!--<div>
+        <label for="text">Logo</label>
+        <input type="text" name="text" id="logo" placeholder="Logo" [(ngModel)]="logo">
+    </div> -->
+    <div>
+        <label for="text"><h4>Progreso</h4></label><div>
+        <input type="number" name="progreso" id="progreso" placeholder="Progreso" [(ngModel)]="progreso">
+    </div>
+    </div>
+    <!--{{titulo}},{{progreso}},{{logo}}-->
+    <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
+    <button type="button" 
+    class="btn btn-outline-primary me-2" 
+    (click)="mostrar_formulario1()">
+    Cerrar
+    </button>
+</form>

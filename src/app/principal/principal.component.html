@@ -1,40 +1,143 @@
 <div class="mat-card" id="first-card">
     <div id="profile-background">
-        <img [src]="miPorfolio.backImage">
+        <!-- <img src="./assets/imagenes/fondo.png"> -->
+        <img [src]="miImgPrincipal[0].text5">
+
     </div>
     <div id="info" style="padding: 16px">
         <div id="info-img">
-            <img class="profile-image" src="./assets/imagenes/cara.png">
-            <div class="btn-edit">
-                <a href="#" class="btn-right">
+            <img class="profile-image" [src]="miImgPrincipal[0].text6">
+            <div *ngIf="loginSi" class="btn-edit" (click)="mostrar_formulario()">
+                <a class="btn-right">
                     <i class="fa fa-pen"></i>
                 </a>
             </div>
+            <!--<div *ngIf="loginSi" class="btn-edit">
+                <a href="#" class="btn-right"> Aca esta el icono del editor
+                    <i class="fa fa-pen"></i> 
+                </a>
+            </div>-->
         </div>
         <div id="info-data">
             <div>
-                <h1>{{miPorfolio.name}}</h1>
-                <div id="info-company">INFORMACION DEL TIPO</div>
-                <div id="info-contact">
-                    <span>LUGAR X DEL TIPO</span>
-                    <span><a href="#">INFORMACION DEL TIPO</a></span>
+                <h1>{{miDatoPrincipal[0].text1}}</h1>
+                <div>
+                    <h2>{{miDatoPrincipal[0].text2}}</h2>
+                </div>
+                <div>
+                    <h6>{{miDatoPrincipal[0].text3}}</h6>
+                </div>
+                <div>
+                    <h6>{{miDatoPrincipal[0].text4}}</h6>
                 </div>
             </div>
             <ul id="info-details">
                 <li><a href="#">
-                        <img src="./assets/imagenes/logo1.png">
-                        <h2>TRABAJO EN CASA</h2>
+                        <img [src]="miImgPrincipal[0].text7">
+                        <h2>Telegram</h2>
                     </a></li>
                 <li><a href="#">
-                        <img src="./assets/imagenes/logo2.png">
-                        <h2>TRABAJO EN CASA SI QUIERO</h2>
+                        <img [src]="miImgPrincipal[0].text8">
+                        <h2>WhatsApp</h2>
                     </a></li>
             </ul>
         </div>
-        <div id="info-actions">
-            <button type="button" class="btn btn-primary">tengo interes en</button>
-            <button type="button" class="btn btn-light">Boton 2</button>
-            <button type="button" class="btn btn-light">Boton 3</button>
+        <div *ngIf="loginSi" id="info-actions">
+            <button type="button" class="btn btn-primary" (click)="mostrar_formularioImg()">Cambiar imagenes</button>
+            <!--<button type="button" class="btn btn-light">Boton 2</button>
+            <button type="button" class="btn btn-light">Boton 3</button>-->
         </div>
+
+        <!--Formulario Datos-->
+        <form *ngIf="edit" class="mat-card" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="text">
+                    <h4>Nombre completo</h4>
+                </label>
+                <div>
+                    <input type="text" name="text" id="text1" placeholder="Nombre y Apellido" [(ngModel)]="text1">
+                </div>
+            </div>
+            <div>
+                <label for="text">
+                    <h4>Titulo</h4>
+                </label>
+                <div>
+                    <input type="text" name="text" id="text2" placeholder="Titulo" [(ngModel)]="text2">
+                </div>
+            </div>
+            <div>
+                <label for="text">
+                    <h4>Cargo</h4>
+                </label>
+                <div>
+                    <input type="text" name="text" id="text3" placeholder="Cargo" [(ngModel)]="text3">
+                </div>
+            </div>
+            <div>
+                <label for="text">
+                    <h4>Lugar donde Vive</h4>
+                </label>
+                <div>
+                    <input type="text" name="text" id="text4" placeholder="Lugar" [(ngModel)]="text4">
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-primary me-2" (click)="mostrar_formulario()">Cerrar</button>
+            <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
+        </form>
+
+
+        <!--    Formulario Imagenes    -->
+        <form *ngIf="edit1" class="mat-card" (ngSubmit)="onSubmit1()">
+            <div>
+                <label for="text">
+                    <h4>Imagen de fondo</h4>
+                </label>
+                <div>
+                    <input type="text" name="text" id="text5" placeholder="agregar algo1" [(ngModel)]="text5">
+                </div>
+            </div>
+            <div>
+                <label for="text">
+                    <h4>Foto Perfil</h4>
+                </label>
+                <div>
+                    <input type="text" name="text" id="text6" placeholder="agregar algo1" [(ngModel)]="text6">
+                </div>
+            </div>
+            <div>
+                <label for="text">
+                    <h4>Social 1</h4>
+                </label>
+                <div>
+                    <input type="text" name="text" id="text6" placeholder="agregar algo1" [(ngModel)]="text7">
+                </div>
+            </div>
+            <div>
+                <label for="text">
+                    <h4>Social 2</h4>
+                </label>
+                <div>
+                    <input type="text" name="text" id="text6" placeholder="agregar algo1" [(ngModel)]="text8">
+                </div>
+            </div>
+            <!--<p>{{text1}},{{text2}},{{text3}},{{text4}},{{text5}},{{text6}}</p>-->
+            <button type="button" class="btn btn-outline-primary me-2" (click)="mostrar_formularioImg()">Cerrar</button>
+            <input type="submit" value="Guardar" class="btn btn-outline-primary me-2">
+        </form>
     </div>
 </div>
+
+
+
+<!-- codigo para usar
+Este codigo es el del boton para editar el tipo lapis
+    <div 
+    *ngIf="loginSi" class="btn-edit" (click)="mostrar_formulario()">
+    <a class="btn-right">
+    <i class="fa fa-pen"></i>
+    </a>
+    </div>
+-------------
+
+-->

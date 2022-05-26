@@ -12,7 +12,8 @@ token:any;
   constructor(private http: HttpClient,private cookies : CookieService) { }
 
 login(user:any): Observable<any>{
-  return this.http.post("http://localhost:8080/auth/login", user)
+  return this.http.post("https://api-para-porfolio.herokuapp.com/auth/login", user)
+  //return this.http.post("http://localhost:8080/auth/login", user)
   //return this.http.post("https://reqres.in/api/login", user)
 }
 

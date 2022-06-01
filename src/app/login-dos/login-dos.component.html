@@ -1,14 +1,53 @@
 <div class="mat-card">
 <h1>Login</h1>
-    <form class="m-5">
-    <div class="mb-3"> <label for="exampleInputEmail1" class="form-label">Email address</label> <input type="email"
-            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <form [formGroup]="form" class="m-5">
+    <div class="mb-3"> 
+        <label for="userName" class="form-label">Usuario</label> 
+        <input type="text"
+            formControlName="nombreUsuario"
+            class="form-control" 
+            id="userName" 
+            aria-describedby="userHelp"
+            [ngClass]="{
+             'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched,
+             'is-valid': !NombreUsuario?.errors && NombreUsuario?.touched
+            }"
+        >
+        <div id="userHelp" class="form-text">
+            Usuario y Password tienen que tener mas de 7 letras.
+        </div>
+    
+        <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
+            <p *ngIf="NombreUsuario?.hasError('required')" class="text-danger">
+                Ingrese un nombre de usuario.
+            </p>
+            <p *ngIf="NombreUsuario?.errors?.['minlength']" class="text-danger">
+                El nombre tiene que tener mas de 7 letras.
+            </p>
+        </div>
     </div>
-    <div class="mb-3"> <label for="exampleInputPassword1" class="form-label">Password</label> <input type="password"
-            class="form-control" id="exampleInputPassword1"> </div>
-    <div class="mb-3 form-check"> <input type="checkbox" class="form-check-input" id="exampleCheck1"> <label
-            class="form-check-label" for="exampleCheck1">Check me out</label> </div> <button type="submit"
-        class="btn btn-primary">Submit</button>
+      
+    <div class="mb-3"> 
+        <label for="exampleInputPassword1" class="form-label">Password</label> 
+        <input type="password"
+            formControlName="password"
+            class="form-control" 
+            id="exampleInputPassword1"
+            [ngClass]="{
+             'is-invalid': Password?.errors && Password?.touched,
+             'is-valid': !Password?.errors && Password?.touched
+            }"
+        >
+        <div *ngIf="Password?.errors && Password?.touched">
+            <p *ngIf="Password?.hasError('required')" class="text-danger">
+              La contraseña es requerida.
+            </p>
+            <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+              La contraseña debe tener mas de 7 letras.
+            </p>
+          </div> 
+    </div>
+    <button type="submit"
+        class="btn btn-primary"(click)="login()">Metele</button>
 </form>
 </div>

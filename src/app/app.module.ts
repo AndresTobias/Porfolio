@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,7 @@ import { interceptorProvider } from './interceptor.service';
 import { PorfolioComponent } from './porfolio/porfolio.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { TortasComponent } from './tortas/tortas.component';
+import { LoginDosComponent } from './login-dos/login-dos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +33,13 @@ import { TortasComponent } from './tortas/tortas.component';
     FormAcecaDeComponent,
     ModalComponent,
     PorfolioComponent,
-    TortasComponent
+    TortasComponent,
+    LoginDosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
     NgCircleProgressModule.forRoot({})

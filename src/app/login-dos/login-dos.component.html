@@ -1,0 +1,72 @@
+<body>
+    <div>
+
+    </div>
+<div class="text-center">
+  <div class="col-sm-8 main-section">
+    <div class="mat-card modal-content">
+    <!-- <h1>Login</h1> -->
+        <div class="col-12 user-img">
+            <img src="./assets/imagenes/playArmadura.jpg">
+        </div>
+        <div class="col-12" > 
+            <form [formGroup]="form" class="m-5">
+                <div class="mb-3"> 
+                    <label for="userName" class="form-label">
+                        <i class="fas fa-user-alt" style='font-size:24px'></i> 
+                    </label>
+                    <input type="text"
+                        formControlName="nombreUsuario"
+                        class="form-control"
+                        id="userName" 
+                        aria-describedby="userHelp"
+                        [ngClass]="{
+                        'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched,
+                        'is-valid': !NombreUsuario?.errors && NombreUsuario?.touched
+                        }"
+                    >
+                    <!-- <div id="userHelp" class="form-text">
+                        Usuario y Password tienen que tener mas de 7 letras.
+                    </div> -->
+                    <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
+                            <p *ngIf="NombreUsuario?.hasError('required')" class="text-danger">
+                                Ingrese un nombre de usuario.
+                            </p>
+                            <p *ngIf="NombreUsuario?.errors?.['minlength']" class="text-danger">
+                                El nombre tiene que tener mas de 7 letras.
+                            </p>
+                    </div>
+                </div>
+                <div class="mb-3"> 
+                        <label for="exampleInputPassword1" class="form-label">
+                            <i class="fas fa-key" style='font-size:24px'></i>
+                        </label> 
+                        <input type="password"
+                            formControlName="password"
+                            class="form-control" 
+                            id="exampleInputPassword1"
+                            [ngClass]="{
+                            'is-invalid': Password?.errors && Password?.touched,
+                            'is-valid': !Password?.errors && Password?.touched
+                            }"
+                        >
+                        <div *ngIf="Password?.errors && Password?.touched">
+                            <p *ngIf="Password?.hasError('required')" class="text-danger">
+                            Ingresa una contraseña.
+                            </p>
+                            <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+                            La contraseña debe tener mas de 7 letras.
+                            </p>
+                        </div> 
+                </div>
+                <button *ngIf="!Password?.errors && !NombreUsuario?.errors" type="submit"
+                    class="btn btn-primary"(click)="login()">
+                    <i class="fas fa-sign-in-alt" style='font-size:24px'></i>
+                    
+                </button>
+            </form>
+        </div>
+    </div>
+  </div>
+</div> 
+</body>

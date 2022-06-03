@@ -11,14 +11,14 @@ import { TrabajosComponent } from './trabajos/trabajos.component';
 const routes: Routes = [
   // { path: "", component: AppComponent },
   { path: "porfolio", component: PorfolioComponent },
-  { path: "login", component: LoginComponent },
+  { path: "login-dos", component: LoginDosComponent },
   { path: "register", component: RegisterComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'trabajos', component: TrabajosComponent },
   { path: 'acerca', component: AcercaDeComponent },
   { path: 'tortas', component: TortasComponent },
-  { path: 'login-dos', component: LoginDosComponent },
-  { path: '', redirectTo: 'login' , pathMatch: 'full' }
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'login-dos' , pathMatch: 'full' }
 ];
 
 @NgModule({

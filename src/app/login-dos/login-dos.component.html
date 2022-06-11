@@ -59,11 +59,16 @@
                             </p>
                         </div> 
                 </div>
-                <button *ngIf="!Password?.errors && !NombreUsuario?.errors" type="submit"
+                <button *ngIf="!Password?.errors && !NombreUsuario?.errors && !girador" type="submit"
                     class="btn btn-primary"(click)="login()">
                     <i class="fas fa-sign-in-alt" style='font-size:24px'></i>
                     
                 </button>
+                <div *ngIf="girador" class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                <p *ngIf="rechazado">No estas Autorizado. No hagas enojar al guadian </p>
+                  
             </form>
         </div>
     </div>

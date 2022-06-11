@@ -12,13 +12,14 @@ export class LoginComponent implements OnInit {
   email!: string;
   password!: string;
   loginSi!:any;
-  
+  girador:boolean=false;
   constructor(private userService:UsersService, private router:Router) { }
 
   ngOnInit(): void {
   }
   
   login() {
+    this.girador=true;
     const user = { nombreUsuario: this.email, password: this.password };
     this.userService.login(user).subscribe(
       data => {

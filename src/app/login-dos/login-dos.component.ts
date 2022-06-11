@@ -11,6 +11,8 @@ import { UsersService } from '../users.service';
 export class LoginDosComponent implements OnInit {
   form:FormGroup;
   loginSi!:any;
+  girador:boolean=false;
+  rechazado:boolean=false;
   constructor(private formBuilder:FormBuilder,
               private userService:UsersService,
               private router:Router 
@@ -35,6 +37,7 @@ get Password(){
 login() {
   const user = { nombreUsuario: this.NombreUsuario?.value, password: this.Password?.value};
   console.log(user);
+  this.girador=true;
   this.userService.login(user).subscribe(
     data => {
       this.userService.setToken(data.token);
@@ -51,6 +54,8 @@ login() {
     },
     error => {
       console.log(error);
+      this.girador=false;
+      this.rechazado=true;
     });
     this.router.navigateByUrl('/');
     this.irAlPrincipio();

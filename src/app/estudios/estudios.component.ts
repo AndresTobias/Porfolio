@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef} from '@angular/core';
 import { DatosPorfolioService } from '../datos-porfolio.service';
 import { Estudios } from '../estudios';
 import { UsersService } from '../users.service';
@@ -126,4 +126,5 @@ export class EstudiosComponent implements OnInit {
     this.edit = !this.edit;
     console.log(this.idX);
   }
+  
 }

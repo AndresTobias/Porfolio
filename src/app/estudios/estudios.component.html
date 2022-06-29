@@ -3,8 +3,7 @@
         <div class="card-titles">
             <h2>Estudios</h2>
             <div *ngIf="loginSi" class="btn-edit" (click)="mostrar_formularioadd()">
-                <a class="btn-right">
-                    <!-- href="#formularioadd" -->
+                 <a class="btn-right" (click)="formularioadd.scrollIntoView({behavior: 'smooth'})"><!--href="#formularioadd" -->
                     <i class="fa fa-plus"></i>
                 </a>
             </div>
@@ -32,7 +31,7 @@
                         </a>
                     </div>
                     <div class="data-control" *ngIf="loginSi">
-                        <div class="btn-edit" (click)="estudiox(estudioX.id)">
+                        <div class="btn-edit" (click)="estudiox(estudioX.id)" (click)="formularioadd.scrollIntoView({behavior: 'smooth'})">
                             <a>
                                 <!--href="#formularioadd"-->
                                 <i class="fa fa-pen-alt"></i>
@@ -57,7 +56,7 @@
             </ul>
         </div>
         <!-- <p>{{idX}} mostrad id edit={{edit}} add={{add}}</p>  -->
-        <div id="formularioadd"></div>
+        <div #formularioadd></div>
     </div>
 
     <!--                                     Formulario                                               -->

@@ -42,7 +42,12 @@
     <div class="col-md-3 text-end">
       <a *ngIf="!loginSi" href="/login" class="btn btn-primary">Login</a>
 
-      <button *ngIf="loginSi" type="button" class="btn btn-outline-primary me-2" (click)="logout()">
+      <button 
+      *ngIf="loginSi" 
+      type="button" 
+      class="btn btn-outline-primary me-2" 
+      (click)="logout()"
+      >
         Logout
       </button>
       <!--

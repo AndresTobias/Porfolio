@@ -3,7 +3,7 @@
         <div class="card-titles">
             <h2>Experiencia</h2>
             <div *ngIf="loginSi" class="btn-edit" (click)="mostrar_formularioadd()">
-                <a class="btn-right">
+                <a class="btn-right" (click)="formularioTrabajo.scrollIntoView({behavior: 'smooth'})">
                     <!--href="#formularioTrabajo"-->
                     <i class="fa fa-plus"></i>
                 </a>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="data-control" *ngIf="loginSi">
                         <div class="btn-edit" (click)="trabajox(trabajoX.id)">
-                            <a>
+                            <a (click)="formularioTrabajo.scrollIntoView({behavior: 'smooth'})">
                                 <!--href="#formularioTrabajo"-->
                                 <i class="fa fa-pen-alt"></i>
                             </a>
@@ -65,7 +65,7 @@
 
     </div>
 </div>
-<div id="formularioTrabajo"></div>
+<div #formularioTrabajo></div>
 <form *ngIf="add||edit" class="mat-card" (ngSubmit)="onSubmit()">
     <div *ngIf="edit">
         <h4>Editar </h4>

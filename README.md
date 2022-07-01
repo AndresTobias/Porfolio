@@ -8,6 +8,10 @@ Tiene lo que pedía un login, poder agregar, editar y borrar los distintos campo
 # Este es el login
 https://github.com/AndresTobias/Porfolio/blob/master/login.png
 ![Screenshot](https://github.com/AndresTobias/Porfolio/blob/master/login.png)
+Sin mucho que comentar del login mas que controla si el usuario y contraseña tiene mas de determinada longitud nada todo lo que esta en la master class del capítulo 8. Bueno asi quedo.
+
+
+
 
 # Este es el porfolio
 

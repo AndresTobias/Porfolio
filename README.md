@@ -5,8 +5,11 @@ Te cuento un poco de esto por si te sirve.
 En este repo encontras la parte en Angular del porfolio.
 Tiene lo que pedía un login, poder agregar, editar y borrar los distintos campos que guarda en una base de datos que en mi caso use mariaDB pero da lo mismo se comportó igual que mysql.
 
+# Este es el login
 https://github.com/AndresTobias/Porfolio/blob/master/login.png
+![Screenshot](https://github.com/AndresTobias/Porfolio/blob/master/login.png)
 
+# Este es el porfolio
 
 
 firebase

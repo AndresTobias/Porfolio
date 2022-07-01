@@ -1,4 +1,12 @@
 # Porfolio 
+Porfolio de Argentina Programa
+
+Te cuento un poco de esto por si te sirve.
+En este repo encontras la parte en Angular del porfolio.
+Tiene lo que pedía un login, poder agregar, editar y borrar los distintos campos que guarda en una base de datos que en mi caso use mariaDB pero da lo mismo se comportó igual que mysql.
+
+
+
 firebase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
